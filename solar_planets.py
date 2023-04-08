@@ -1,10 +1,5 @@
 import cv2
 
-def click_event(event, x, y, flag, params):
-    if event == cv2.EVENT_LBUTTONDOWN:
-        print(x, ' ', y)
-
-
 img = cv2.imread("solar-system.jpg")
 
 cv2.putText(img,
@@ -73,7 +68,5 @@ cv2.putText(img,
 cv2.imshow("Solar System", img)
 
 cv2.imwrite("Solar_systemwithname.jpg", img)
-
-cv2.setMouseCallback("Solar System", click_event)
 
 cv2.waitKey(0)
